@@ -24,3 +24,21 @@ export interface ConnectionButtonProps {
     isConnected: boolean;
     onClick: () => void;
 }
+
+export interface ContentItem {
+    type: string;
+    transcript: string;
+}
+
+export interface Message {
+    id: string;
+    object: string;
+    type: string;
+    status: string;
+    role: string;
+    content: ContentItem[];
+}
+
+export interface ChatMessagesProps {
+    messages: Message[];
+}

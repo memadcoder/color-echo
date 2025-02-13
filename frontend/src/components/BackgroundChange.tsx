@@ -9,6 +9,7 @@ import { WavRecorder, WavStreamPlayer } from "../lib/wavtools/index.js";
 import { RealtimeClient } from "@openai/realtime-api-beta";
 import { instructions } from "../utils/conversation_config";
 import ControlPanel from "./ControlPanel";
+import ChatMessages from "./ChatMessages";
 
 const LOCAL_SOCKET_SERVER_URL: string =
     process.env.REACT_APP_LOCAL_SOCKET_SERVER_URL || "";
@@ -199,6 +200,7 @@ export default function BackgroundChange() {
 
     return (
         <div style={containerStyle}>
+            <ChatMessages messages={items} />
             <ControlPanel
                 isConnected={isConnected}
                 isRecording={isRecording}
