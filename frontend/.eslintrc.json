@@ -1,0 +1,9 @@
+{
+    "parserOptions": {
+      "sourceType": "module"
+    },
+    "env": {
+      "es2022": true
+    }
+  }
+  
