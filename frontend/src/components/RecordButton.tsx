@@ -29,7 +29,7 @@ export default function RecordButton({
             onMouseUp={onMouseUp}
         >
             {isRecording ? <FaStop /> : <FaMicrophone />}
-            {isRecording ? "Stop Listening" : "Start Listening"}
+            {isRecording ? "Stop Recording" : "Start Recording"}
         </button>
     );
 }

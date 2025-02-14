@@ -55,12 +55,12 @@ export default function BackgroundChange() {
             await wavStreamPlayer.connect();
 
             await client.connect();
-            client.sendUserMessageContent([
-                {
-                    type: "input_text",
-                    text: "Hello!",
-                },
-            ]);
+            // client.sendUserMessageContent([
+            //     {
+            //         type: "input_text",
+            //         text: "Hello!",
+            //     },
+            // ]);
 
             if(client.getTurnDetectionType() === "server_vad") {
                 await wavRecorder.record((data) =>
